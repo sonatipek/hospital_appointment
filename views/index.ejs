@@ -11,9 +11,55 @@
 </head>
 <body>
     <%- include('partials/navbar') %>
-    <h1>İndex</h1>
+    
+    <div class="container mt-5" >
+        <div class="row row-cols-2">
 
+            <!-- Card-1 -->
+            <div class="card col-5 mx-1 my-2" style="width: 18rem;">
+                <img src="https://picsum.photos/seed/hot/200/100" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Hasta Kayıt</h5>
+                <p class="card-text">Hastalar bu kısımdan kendi kayıtlarını gerçekleştirebilirler.</p>
+                <a href="/hastakayit" class="btn btn-primary">Git!</a>
+                </div>
+            </div>
 
+            <!-- Card-2 -->
+            <div class="card col-5 mx-1 my-2" style="width: 18rem;">
+                <img src="https://picsum.photos/seed/zas/200/100/" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Doktor Kayıt</h5>
+                <p class="card-text">Doktorlar bu kısımdan kayıtlarını gerçekleştirebilirler.</p>
+                <a href="/doktorkayit" class="btn btn-primary">Git!</a>
+                </div>
+            </div>
+        
+
+            <!-- Card-3 -->
+            <div class="card col-5 mx-1 my-2" style="width: 18rem;">
+                <img src="https://picsum.photos/seed/pium/200/100" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Hasta Listesi</h5>
+                <p class="card-text">Bu kısımdan mevcut hastalara göz atabilirsiniz.</p>
+                <a href="/hastalist" class="btn btn-primary">Git!</a>
+                </div>
+            </div>
+
+            <!-- Card-4 -->
+            <div class="card col-5 mx-1 my-2" style="width: 18rem;">
+                <img src="https://picsum.photos/seed/sonat/200/100" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Doktor Listesi</h5>
+                <p class="card-text">Bu kısımdan mevcut doktorlara göz atabilirsiniz.</p>
+                <a href="/doktorlist" class="btn btn-primary">Git!</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
