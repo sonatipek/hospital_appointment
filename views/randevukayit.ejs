@@ -19,13 +19,13 @@
     <div class="card row mt-5">
       <div class="card-header">Randevu Kayıt</div>
       <div class="card-body"> 
-        <form id = "randevu-form" name="form__randevu-kayit" action="randevuKayit" method="POST">
+        <form id = "form__randevukayit" name="form__randevukayit" action="empty-now" method="POST">
           <div class="form-row">
 
             <!-- Randevu Saati -->
             <div class="form-group col-6 col-sm-4 col-md-3 ">
-              <label for="randevu-saati">Randevu Tarih ve Saati</label>
-              <input class="form-control" type="datetime-local" name="randevuSaati" id = "randevu-saati" required>
+              <label for="randevu__tarihvesaat">Randevu Tarih ve Saati</label>
+              <input class="form-control" type="datetime-local" name="randevu__tarihvesaat" id = "randevu__tarihvesaat" required>
             </div>
 
             <!-- Hasta Adı -->
@@ -41,8 +41,8 @@
 
             <!-- Doktor Adı -->
             <div class="form-group col-6 col-sm-4 col-md-3 ">
-              <label for="doktoradi">Doktor Seçiniz</label>
-              <select class="form-control" name="randevu__doktoradi" id="doktoradi">
+              <label for="randevu__doktoradi">Doktor Seçiniz</label>
+              <select class="form-control" name="randevu__doktoradi" id="randevu__doktoradi">
                 <option value="doktor-empty">Lütfen Bir Doktor Seçiniz</option>
                 
                 
