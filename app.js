@@ -33,6 +33,10 @@ app.get("/hastagiris", (req, res) => {
     res.render("hastagiris.ejs")
 })
 
+app.get('/randevukayit', (req, res) =>{
+    res.render("randevukayit.ejs")
+})
+
 
 
 app.listen(port,hostname, () =>{
