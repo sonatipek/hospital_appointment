@@ -22,33 +22,40 @@
         <form id = "form__randevukayit" name="form__randevukayit" action="empty-now" method="POST">
           <div class="form-row">
 
+            <!-- Branş -->
+            <div class="form-group col-7 col-sm-5 col-md-4 ">
+              <label for="doktoradi">Branş Seçiniz</label>
+              <select class="form-control" name="randevu__brans" id="randevu__brans">
+                <option value="doktor-empty">Lütfen Bir Branş Seçiniz</option>
+                
+              </select>
+            </div>
+
+            <!-- Doktor Adı -->
+            <div class="form-group col-7 col-sm-5 col-md-4 ">
+              <label for="randevu__doktoradi">Doktor Seçiniz</label>
+              <select class="form-control" name="randevu__doktoradi" id="randevu__doktoradi">
+                <option value="doktor-empty">Lütfen Bir Doktor Seçiniz</option>
+                
+              </select>
+            </div>
+
+            <!-- Hasta Adı -->
+            <div class="form-group col-7 col-sm-5 col-md-4 ">
+              <label for="randevu__hastadi">Hasta Seçiniz</label>
+              <select class="form-control" name="randevu__hastadi" id="randevu__hastadi" ng-controller="mycontrol">
+                <option value="hasta-empty">Lütfen Bir Hasta Seçiniz</option>
+                
+              </select>
+            </div>
+
+            
             <!-- Randevu Saati -->
             <div class="form-group col-6 col-sm-4 col-md-3 ">
               <label for="randevu__tarihvesaat">Randevu Tarih ve Saati</label>
               <input class="form-control" type="datetime-local" name="randevu__tarihvesaat" id = "randevu__tarihvesaat" required>
             </div>
-
-            <!-- Hasta Adı -->
-            <div class="form-group col-6 col-sm-4 col-md-3 ">
-              <label for="randevu__hastadi">Hasta Seçiniz</label>
-              <select class="form-control" name="randevu__hastadi" id="randevu__hastadi" ng-controller="mycontrol">
-
-                <option value="hasta-empty">Lütfen Bir Hasta Seçiniz</option>
-                
-              </select>
-              
-            </div>
-
-            <!-- Doktor Adı -->
-            <div class="form-group col-6 col-sm-4 col-md-3 ">
-              <label for="randevu__doktoradi">Doktor Seçiniz</label>
-              <select class="form-control" name="randevu__doktoradi" id="randevu__doktoradi">
-                <option value="doktor-empty">Lütfen Bir Doktor Seçiniz</option>
-                
-                
-              </select>
-            </div>
-          
+            
           </div>
           <button type="submit" class="btn btn-success" id="create-randevu">Randevu Oluştur</button>
 
