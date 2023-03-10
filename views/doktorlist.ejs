@@ -17,7 +17,7 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">ID</th>
+                <th scope="col">Doktor Numarası</th>
                 <th scope="col">Ad</th>
                 <th scope="col">Soyad</th>
                 <th scope="col">Branş</th>
@@ -27,33 +27,17 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Doktor -1</td>
-                <td>Doktor -1</td>
-                <td>Branş -1</td>
-                <td>Klinik -1</td>
-                <td>6032560614</td>
-                <td>doktor1@gmail.com</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Doktor -2</td>
-                <td>Doktor -2</td>
-                <td>Branş -2</td>
-                <td>Klinik -1</td>
-                <td>6219501593</td>
-                <td>doktor2@gmail.com</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Doktor -3</td>
-                <td>Doktor -3</td>
-                <td>Branş -3</td>
-                <td>Klinik -1</td>
-                <td>6497316118</td>
-                <td>doktor3@gmail.com</td>
-              </tr>
+              <% data.forEach(el => { %>
+                <tr>
+                  <th scope="row"><%= el.doktor_id %></th>
+                  <td><%= el.doktor_ad %></td>
+                  <td><%= el.doktor_soyad %></td>
+                  <td><%= el.doktor_brans %></td>
+                  <td><%= el.doktor_klinik %></td>
+                  <td><%= el.doktor_telefon %></td>
+                  <td><%= el.doktor_email %></td>
+                </tr>
+              <% }) %>
             </tbody>
           </table>
     </div>

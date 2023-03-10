@@ -31,7 +31,13 @@ app.get("/hastalist", (req, res) => {
     })
 })
 app.get("/doktorlist", (req, res) => {
-    res.render("doktorlist.ejs")
+    connection.query('SELECT * FROM doktorlar', (err, results, fields)=>{
+        if (err){
+            res.send("<h1> Sunucu Tarafında bir hata oluştu </h1>" + err)
+        }else{
+            res.render("doktorlist", {data:results})
+        }
+    })
 })
 app.get("/doktorgiris", (req, res) => {
     res.render("doktorgiris.ejs")
