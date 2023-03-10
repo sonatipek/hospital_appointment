@@ -22,7 +22,13 @@ app.get("/doktorkayit", (req, res) => {
     res.render("doktorkayit.ejs")
 })
 app.get("/hastalist", (req, res) => {
-    res.render("hastalist.ejs")
+    connection.query('SELECT * FROM hastalar', (err, results, fields)=>{
+        if (err){
+            res.send("<h1> Sunucu Tarafında bir hata oluştu </h1>" + err)
+        }else{
+            res.render("hastalist", {data:results})
+        }
+    })
 })
 app.get("/doktorlist", (req, res) => {
     res.render("doktorlist.ejs")

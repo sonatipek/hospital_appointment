@@ -17,7 +17,7 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">ID</th>
+                <th scope="col">Hasta Numarası</th>
                 <th scope="col">Ad</th>
                 <th scope="col">Soyad</th>
                 <th scope="col">T.C. No</th>
@@ -26,30 +26,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Hasta -1</td>
-                <td>Hasta -1</td>
-                <td>20125679843</td>
-                <td>5879622014</td>
-                <td>hasta1@gmail.com</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Hasta -2</td>
-                <td>Hasta -2</td>
-                <td>12345678974</td>
-                <td>7894561230</td>
-                <td>hasta2@gmail.com</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Hasta -3</td>
-                <td>Hasta -3</td>
-                <td>10347645780</td>
-                <td>5569874023</td>
-                <td>hasta3@gmail.com</td>
-              </tr>
+              <% data.forEach(el => { %>
+                <tr>
+                  <th scope="row"><%= el.hasta_id %></th>
+                  <td><%= el.hasta_ad %></td>
+                  <td><%= el.hasta_soyad %></td>
+                  <td><%= el.hasta_tcno %></td>
+                  <td><%= el.hasta_telefon %></td>
+                  <td><%= el.hasta_email %></td>
+                </tr>
+              <% }) %>
             </tbody>
           </table>
     </div>
