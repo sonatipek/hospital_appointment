@@ -9,6 +9,7 @@ const port = 3000
 const hostname = "localhost"
 
 app.set("view engine", "ejs")
+app.use(express.static('images'));
 
 // Routing
 app.get("/", (req, res) => {
