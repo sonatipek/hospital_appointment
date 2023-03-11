@@ -24,7 +24,7 @@ app.get("/doktorkayit", (req, res) => {
 app.get("/hastalist", (req, res) => {
     connection.query('SELECT * FROM hastalar', (err, results, fields)=>{
         if (err){
-            res.send("<h1> Sunucu Tarafında bir hata oluştu </h1>" + err)
+            res.send("<h1> Sunucu Tarafında bir hata oluştu </h1>" + err + "<br><a href='/'> Ana Menüye Dön </a>")
         }else{
             res.render("hastalist", {data:results})
         }
@@ -33,7 +33,7 @@ app.get("/hastalist", (req, res) => {
 app.get("/doktorlist", (req, res) => {
     connection.query('SELECT * FROM doktorlar', (err, results, fields)=>{
         if (err){
-            res.send("<h1> Sunucu Tarafında bir hata oluştu </h1>" + err)
+            res.send("<h1> Sunucu Tarafında bir hata oluştu </h1>" + err + "<br><a href='/'> Ana Menüye Dön </a>")
         }else{
             res.render("doktorlist", {data:results})
         }
