@@ -22,17 +22,33 @@
                 </div>
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                     <h2 class="mb-5">Doktor Giriş Ekranı</h2>
-                    <form id="" name="" action="" method="">
+                    <form id="giris__doktor" name="giris__doktor" action="/doktorgiriskontrol" method="get">
 
                         <!-- Email input -->
                         <div class="form-group mb-3">
-                            <label for="kayit__hastaadi">Email</label>
-                            <input class="form-control" type="email" name="kayit__hastaadi" id = "kayit__hastaadi" placeholder="Kayıt olduğunuz email ile giriş yapınız" required>
+                            <label for="giris__doktormail">Email</label>
+                            <input class="form-control" type="email" name="giris__doktormail" id = "giris__doktormail" placeholder="Kayıt olduğunuz email ile giriş yapınız" required>
                         </div>
 
                         <!-- Button -->
                         <div class="text-center">
-                            <button type="button" class="btn btn-primary btn-block">Giriş Yap</button>
+                            <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+                            <% if (basari === true) { %>
+                                <div class="alert alert-success" role="alert">
+                                    Giriş Başarılı! Doktor olarak giriş yaptınız.
+                                </div>
+                            <% } %>
+                            <% if (basari === false) { %>
+                                <div class="alert alert-danger" role="alert">
+                                    Giriş Başarısız! Böyle bir doktor yok.
+                                </div>
+                            <% } %>
+                            <% if (basari === "nötr") { %>
+                                
+                            <% } %>
+
+                            
+                            
                             <p class="mt-2 pt-1 mb-0">
                                 Henüz kayıtlı değil misin?
                                 <a href="/doktorkayit" class="link-danger">Kaydol</a>
